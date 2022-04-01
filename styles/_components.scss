@@ -1,0 +1,92 @@
+@use "_base.scss" as *;
+
+// COMPONENTS -> INDIVIDUAL ITEMS / ELEMENTS
+
+.logo {
+  font-family: $font-display;
+  color: $color-white;
+  font-size: 20px;
+}
+
+.button {
+  display: block;
+  width: 100px;
+  background-color: $color-secondary;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: $color-white;
+  border: none;
+
+  &--form {
+    width: 100%;
+    background-color: $color-primary-light;
+  }
+
+  &--secondary {
+    background-color: unset;
+    border: 2px solid $color-primary;
+    color: $color-primary;
+  }
+}
+
+// NESTING
+
+.intro {
+  text-align: center;
+
+  .intro__heading {
+    color: $color-primary;
+    font-size: 50px;
+  }
+  // & = .intro
+  &__sub-heading {
+    font-family: $font-display;
+    font-size: 25px;
+    margin: 20px 0;
+  }
+
+  &__button {
+    margin: 0 auto;
+  }
+}
+
+.wave {
+  fill: $color-primary;
+  fill-opacity: 1;
+  vertical-align: bottom;
+}
+
+.form {
+  background-color: $color-white;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+
+  // .form__field
+  &__field {
+    margin-bottom: 20px;
+  }
+}
+
+.outro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__heading {
+    font-family: $font-display;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+.footer {
+  background-color: $color-primary;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  &__text {
+    color: $color-white;
+  }
+}
